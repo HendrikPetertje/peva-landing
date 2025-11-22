@@ -1,0 +1,156 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**/*.{js,cjs,mjs}",
+      "**/*.{json,jsonc}",
+      "**/*.{ts,cts,mts}",
+      "**/*.d.{ts,cts,mts}",
+      "**/*.{json,jsonc}",
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/cdk.out/**",
+      "**/coverage/**",
+      "**/docs.out/**"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 120,
+    "attributePosition": "auto",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "expand": "auto",
+    "useEditorconfig": true,
+    "includes": ["**"]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "error",
+        "noExcessiveNestedTestSuites": "error",
+        "noForEach": "error",
+        "noUselessStringConcat": "error",
+        "noVoid": "error",
+        "useLiteralKeys": "off" // TODO: https://github.com/biomejs/biome/issues/463#issuecomment-1742449424
+      },
+      "security": {
+        "noGlobalEval": "error"
+      },
+      "performance": {
+        "noBarrelFile": "info",
+        "noDelete": "error",
+        "noImgElement": "off",
+        "noReExportAll": "info",
+        "useTopLevelRegex": "error"
+      },
+      "style": {
+        "noCommonJs": "error",
+        "noInferrableTypes": "error",
+        "noNamespace": "off",
+        "noNegationElse": "off",
+        "noSubstr": "error",
+        "noYodaExpression": "error",
+        "useAsConstAssertion": "error",
+        "useCollapsedIf": "error",
+        "useConsistentArrayType": "error",
+        "useConsistentMemberAccessibility": "off",
+        "useExplicitLengthCheck": "error",
+        "useForOf": "error",
+        "useNumberNamespace": "error",
+        "useThrowNewError": "error",
+        "useTrimStartEnd": "error"
+      },
+      "suspicious": {
+        "noConsole": "error",
+        "noEmptyBlockStatements": "error",
+        "useErrorMessage": "error"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "all",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto",
+      "bracketSpacing": true
+    }
+  },
+  "html": {
+    "formatter": {
+      "selfCloseVoidElements": "always"
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["src/**/*"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "error"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["tools/**/*"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noConsole": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*/*.test.ts", "**/__fixtures__/**/*", "**/__mocks__/**/*"],
+      "linter": {
+        "rules": {
+          "performance": {
+            "noBarrelFile": "off",
+            "noDelete": "off",
+            "noReExportAll": "off",
+            "useTopLevelRegex": "off"
+          },
+          "style": {
+            "noProcessEnv": "off",
+            "noNonNullAssertion": "off"
+          },
+          "suspicious": {
+            "useAwait": "off",
+            "noEmptyBlockStatements": "off",
+            "noExplicitAny": "off"
+          },
+          "complexity": {
+            "noVoid": "off"
+          }
+        }
+      }
+    }
+  ],
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  }
+}

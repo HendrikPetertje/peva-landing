@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  /* Rosé Pine Main Colors */
+  --color-base-base: rgb(25, 23, 36);
+  --color-base-surface: rgb(31, 29, 46);
+  --color-base-overlay: rgb(38, 35, 58);
+  --color-base-muted: rgb(110, 106, 134);
+  --color-base-subtle: rgb(144, 140, 170);
+  --color-base-text: rgb(224, 222, 244);
+  --color-base-love: rgb(235, 111, 146);
+  --color-base-gold: rgb(246, 193, 119);
+  --color-base-rose: rgb(235, 188, 186);
+  --color-base-pine: rgb(49, 116, 143);
+  --color-base-foam: rgb(156, 207, 216);
+  --color-base-iris: rgb(196, 167, 231);
+  --color-base-highlight-low: rgb(33, 32, 46);
+  --color-base-highlight-med: rgb(64, 61, 82);
+  --color-base-highlight-high: rgb(82, 79, 103);
+
+  /* mix up for light */
+  --color-base: var(--color-dawn-base);
+  --color-surface: var(--color-dawn-surface);
+  --color-overlay: var(--color-dawn-overlay);
+  --color-muted: var(--color-dawn-muted);
+  --color-subtle: var(--color-dawn-subtle);
+  --color-text: var(--color-dawn-text);
+  --color-love: var(--color-dawn-love);
+  --color-gold: var(--color-dawn-gold);
+  --color-rose: var(--color-dawn-rose);
+  --color-pine: var(--color-dawn-pine);
+  --color-foam: var(--color-dawn-foam);
+  --color-iris: var(--color-dawn-iris);
+  --color-highlight-low: var(--color-dawn-highlight-low);
+  --color-highlight-med: var(--color-dawn-highlight-med);
+  --color-highlight-high: var(--color-dawn-highlight-high);
+}
+
+:root {
+  /* Insert the rose pine base color scheme here */
+  --background: var(--color-dawn-base);
+  --foreground: var(--color-dawn-text);
+
+  /* mix up for dark */
+  --color-base: var(--color-base-base);
+  --color-surface: var(--color-base-surface);
+  --color-overlay: var(--color-base-overlay);
+  --color-muted: var(--color-base-muted);
+  --color-subtle: var(--color-base-subtle);
+  --color-text: var(--color-base-text);
+  --color-love: var(--color-base-love);
+  --color-gold: var(--color-base-gold);
+  --color-rose: var(--color-base-rose);
+  --color-pine: var(--color-base-pine);
+  --color-foam: var(--color-base-foam);
+  --color-iris: var(--color-base-iris);
+  --color-highlight-low: var(--color-base-highlight-low);
+  --color-highlight-med: var(--color-base-highlight-med);
+  --color-highlight-high: var(--color-base-highlight-high);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-victor-mono);
+  --font-mono: var(--font-victor-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-base-base);
+    --foreground: var(--color-base-text);
+
+    /* Rosé Pine Dawn Colors */
+    --color-dawn-base: rgb(250, 244, 237);
+    --color-dawn-surface: rgb(255, 250, 243);
+    --color-dawn-overlay: rgb(242, 233, 222);
+    --color-dawn-muted: rgb(152, 147, 165);
+    --color-dawn-subtle: rgb(121, 117, 147);
+    --color-dawn-text: rgb(87, 82, 121);
+    --color-dawn-love: rgb(180, 99, 122);
+    --color-dawn-gold: rgb(234, 157, 52);
+    --color-dawn-rose: rgb(215, 130, 126);
+    --color-dawn-pine: rgb(40, 105, 131);
+    --color-dawn-foam: rgb(86, 148, 159);
+    --color-dawn-iris: rgb(144, 122, 169);
+    --color-dawn-highlight-low: rgb(244, 237, 232);
+    --color-dawn-highlight-med: rgb(223, 218, 217);
+    --color-dawn-highlight-high: rgb(206, 202, 205);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
