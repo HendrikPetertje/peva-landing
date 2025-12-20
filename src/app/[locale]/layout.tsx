@@ -56,7 +56,7 @@ export default async function RootLayout({ params, children }: Props) {
         <NextIntlClientProvider>
           <div className="flex flex-col gap-4 min-h-screen">
             <PageHeader />
-            <div className="flex-1 px-8">{children}</div>
+            <div className="flex-1 px-8 flex flex-col">{children}</div>
           </div>
         </NextIntlClientProvider>
       </body>

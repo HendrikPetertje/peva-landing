@@ -1,14 +1,13 @@
 import Slides from '@/components/organisms/Slides/Slides';
-import { getSlides } from '@/repositories/slide';
+import { routing } from '@/i18n/routing';
+import { getDefaultImage, getSlides } from '@/repositories/slide';
 
-type HomePageProps = {
-  params: Promise<{ currentPath?: string }>;
+export const generateStaticParams = async () => {
+  return routing.locales.map((locale) => ({ locale }));
 };
 
-export default async function HomePage(props: HomePageProps) {
-  const { params } = props;
-  const { currentPath } = await params;
-
+export default async function HomePage() {
   const slides = await getSlides();
-  return <Slides slides={slides} currentPath={currentPath} />;
+  const defaultImage = await getDefaultImage();
+  return <Slides slides={slides} defaultImage={defaultImage} />;
 }

@@ -2,5 +2,9 @@
   "RootLayout": {
     "pageTitle": "Hendrik Peter - Home",
     "pageDescription": "Hendrik Peter's personal website"
+  },
+  "WeddingPage": {
+    "pageTitle": "Hendrik Peter - Wedding Photography",
+    "pageDescription": "A selection and details on Wedding photography in the region around Sundsvall"
   }
 }

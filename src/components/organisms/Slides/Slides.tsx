@@ -1,6 +1,5 @@
 'use client';
 
-import { notFound } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { useState } from 'react';
 import type { Slide } from '@/repositories/slide';
@@ -8,16 +7,17 @@ import MarkdownProxy from '../MarkdownProxy/MarkdownProxy';
 
 interface SlidesProps {
   slides: Slide[];
+  defaultImage: string;
 }
 
 export default function Slides(props: SlidesProps) {
-  const { slides } = props;
+  const { slides, defaultImage } = props;
   const locale = useLocale();
-  const [currentPageIndex, setCurrentPageIndex] = useState<null | number>(null);
-  const [secondaryPageIndex, setSecondaryPageIndex] = useState<null | number>(null);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState<null | number>(null);
+  const [secondarySlideIndex, setSecondarySlideIndex] = useState<null | number>(null);
 
   return (
-    <div className="gap-4 block sm:flex">
+    <div className="gap-4 block sm:flex flex-1 items-stretch">
       <div className="flex-1">
         {slides.map((slide, index) => (
           <div key={slide.pathEn}>
@@ -25,13 +25,13 @@ export default function Slides(props: SlidesProps) {
               type="button"
               className="text-4xl leading-16 cursor-pointer"
               onClick={() => {
-                setCurrentPageIndex(index);
-                setSecondaryPageIndex(null);
+                setCurrentSlideIndex(index);
+                setSecondarySlideIndex(null);
               }}
             >
               {locale === 'en' ? slide.titleEn : slide.titleSe}
             </button>
-            <div className={`${currentPageIndex === index ? 'block' : 'hidden'}`}>
+            <div className={`${currentSlideIndex === index ? 'block' : 'hidden'}`}>
               <MarkdownProxy>{locale === 'en' ? slide.descriptionEn : slide.descriptionSe}</MarkdownProxy>
               <div className="ml-8 flex flex-col gap-2">
                 {slide.subSlides?.map((subSlide, secondaryIndex) => (
@@ -40,12 +40,12 @@ export default function Slides(props: SlidesProps) {
                       type="button"
                       className="text-4xl text-(--color-subtle) leading-16 cursor-pointer"
                       onClick={() => {
-                        setSecondaryPageIndex(secondaryIndex);
+                        setSecondarySlideIndex(secondaryIndex);
                       }}
                     >
                       {locale === 'en' ? subSlide.titleEn : subSlide.titleSe}
                     </button>
-                    {secondaryIndex === secondaryPageIndex && (
+                    {secondaryIndex === secondarySlideIndex && (
                       <MarkdownProxy>{locale === 'en' ? subSlide.descriptionEn : subSlide.descriptionSe}</MarkdownProxy>
                     )}
                   </div>
@@ -56,7 +56,19 @@ export default function Slides(props: SlidesProps) {
         ))}
       </div>
 
-      <div className="flex-1">Right</div>
+      <div className="flex-1 relative">
+        <div
+          className="bg-cover bg-no-repeat bg-center transition duration-800 h-full max-h-[900px] absolute left-0 right-0 top-0 bottom-0"
+          style={{ backgroundImage: `url(${defaultImage})`, opacity: currentSlideIndex === null ? '1' : '0' }}
+        />
+        {slides.map((slide, index) => (
+          <div
+            key={slide.pathEn}
+            className="bg-cover bg-no-repeat bg-center transition duration-800 h-full max-h-[900px] absolute left-0 right-0 top-0 bottom-0"
+            style={{ backgroundImage: `url(${slide.imageUrl})`, opacity: index === currentSlideIndex ? '1' : '0' }}
+          />
+        ))}
+      </div>
     </div>
   );
 }

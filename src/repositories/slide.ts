@@ -1,4 +1,8 @@
 'use server';
+import ghGlImage from './slideImages/gh-gl.jpg';
+import linkedinImage from './slideImages/linkedin.jpg';
+import photographyImage from './slideImages/photography.jpg';
+import startImage from './slideImages/start.jpg';
 
 export interface Slide {
   pathEn: string;
@@ -11,6 +15,8 @@ export interface Slide {
   subSlides?: Slide[];
 }
 
+export const getDefaultImage = async () => startImage.src;
+
 export const getSlides = async (): Promise<Slide[]> => [
   {
     pathEn: 'linkedin',
@@ -21,7 +27,7 @@ export const getSlides = async (): Promise<Slide[]> => [
       '[Connect with me on LinkedIn](https://www.linkedin.com/in/hendrik-peter-van-der-meulen/) to explore professional opportunities and collaborations.',
     descriptionSe:
       '[Anslut med mig på LinkedIn](https://www.linkedin.com/in/hendrik-peter-van-der-meulen/) för att utforska professionella möjligheter och samarbeten.',
-    imageUrl: '',
+    imageUrl: linkedinImage.src,
   },
   {
     pathEn: 'github-gitlab',
@@ -29,10 +35,10 @@ export const getSlides = async (): Promise<Slide[]> => [
     titleEn: 'Github & Gitlanb',
     titleSe: 'Github & Gitlanb',
     descriptionEn:
-      'Check out my [Github](https://github.com/hendrikpetertje), [Gist](https://gist.github.com/HendrikPetertje) and [Gitlab](https://git.hendrikpeter.net/) profiles to see current and former projects',
+      'Check out my [Github](https://github.com/hendrikpetertje), [Gist](https://gist.github.com/HendrikPetertje) and [Gitlab](https://git.hendrikpeter.net/) profiles to see current and former projects, ideas and designs',
     descriptionSe:
-      'Kolla in mina [Github](https://github.com/hendrikpetertje), [Gist](https://gist.github.com/HendrikPetertje) och [Gitlab](https://git.hendrikpeter.net/) profiler för att se nuvarande och tidigare projekt',
-    imageUrl: '',
+      'Kolla in mina [Github](https://github.com/hendrikpetertje), [Gist](https://gist.github.com/HendrikPetertje) och [Gitlab](https://git.hendrikpeter.net/) profiler för att se nuvarande och tidigare projekt, idéer och designer',
+    imageUrl: ghGlImage.src,
   },
   {
     pathEn: 'photography',
@@ -41,7 +47,7 @@ export const getSlides = async (): Promise<Slide[]> => [
     titleSe: 'Fotografi',
     descriptionEn: '',
     descriptionSe: '',
-    imageUrl: '',
+    imageUrl: photographyImage.src,
     subSlides: [
       {
         pathEn: 'photography-weddings',
