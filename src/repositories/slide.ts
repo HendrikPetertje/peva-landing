@@ -1,6 +1,8 @@
 'use server';
 
 export interface Slide {
+  pathEn: string;
+  pathSe: string;
   titleEn: string;
   titleSe: string;
   descriptionEn: string;
@@ -11,6 +13,8 @@ export interface Slide {
 
 export const getSlides = async (): Promise<Slide[]> => [
   {
+    pathEn: 'linkedin',
+    pathSe: 'linkedin',
     titleEn: 'LinkedIn',
     titleSe: 'LinkedIn',
     descriptionEn:
@@ -20,15 +24,19 @@ export const getSlides = async (): Promise<Slide[]> => [
     imageUrl: '',
   },
   {
+    pathEn: 'github-gitlab',
+    pathSe: 'github-gitlab',
     titleEn: 'Github & Gitlanb',
     titleSe: 'Github & Gitlanb',
     descriptionEn:
-      'Check out my [Github](https://github.com/hendrikpetertje), [gist](https://gist.github.com/HendrikPetertje) and [Gitlab](https://git.hendrikpeter.net/) profiles to see current and former projects',
+      'Check out my [Github](https://github.com/hendrikpetertje), [Gist](https://gist.github.com/HendrikPetertje) and [Gitlab](https://git.hendrikpeter.net/) profiles to see current and former projects',
     descriptionSe:
-      'Kolla in mina [Github](https://github.com/hendrikpetertje), [gist](https://gist.github.com/HendrikPetertje) och [Gitlab](https://git.hendrikpeter.net/) profiler för att se nuvarande och tidigare projekt',
+      'Kolla in mina [Github](https://github.com/hendrikpetertje), [Gist](https://gist.github.com/HendrikPetertje) och [Gitlab](https://git.hendrikpeter.net/) profiler för att se nuvarande och tidigare projekt',
     imageUrl: '',
   },
   {
+    pathEn: 'photography',
+    pathSe: 'fotografi',
     titleEn: 'Photography',
     titleSe: 'Fotografi',
     descriptionEn: '',
@@ -36,6 +44,8 @@ export const getSlides = async (): Promise<Slide[]> => [
     imageUrl: '',
     subSlides: [
       {
+        pathEn: 'photography-weddings',
+        pathSe: 'fotografi-brollop',
         titleEn: 'Weddings',
         titleSe: 'Bröllop',
         descriptionEn:
@@ -45,6 +55,8 @@ export const getSlides = async (): Promise<Slide[]> => [
         imageUrl: '',
       },
       {
+        pathEn: 'photography-other',
+        pathSe: 'fotografi-annat',
         titleEn: 'Other',
         titleSe: 'Annat',
         descriptionEn:

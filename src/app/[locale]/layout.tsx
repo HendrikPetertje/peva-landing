@@ -26,7 +26,7 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-export const createSticParams = async () => {
+export const generateStaticParams = async () => {
   return routing.locales.map((locale) => ({ locale }));
 };
 
