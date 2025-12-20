@@ -1,0 +1,7 @@
+.activator {
+  background-image: var(--active-flag-image);
+}
+
+.activator:hover {
+  background-image: var(--inactive-flag-image);
+}
