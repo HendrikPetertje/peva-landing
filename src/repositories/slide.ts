@@ -57,7 +57,7 @@ export const getSlides = async (): Promise<Slide[]> => [
         descriptionEn:
           "I photograph events and weddings, [check out some samples and see if I'm a good fit for your upcoming event or wedding!](/en/wedding-photography)",
         descriptionSe:
-          'Jag fotograferar evenemang & bröllop, [du kan se några exempel och kolla om jag passar för er kommande evenemang eller bröllop!](/se/wedding-photography)',
+          'Jag fotograferar evenemang & bröllop, [ni kan se några exempel och kolla om jag passar för er kommande evenemang eller bröllop!](/se/wedding-photography)',
         imageUrl: '',
       },
       {
