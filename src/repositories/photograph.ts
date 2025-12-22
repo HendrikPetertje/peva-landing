@@ -10,6 +10,8 @@ import image7Original from './photographyImages/7.jpg';
 import image8Original from './photographyImages/8.jpg';
 import image9Original from './photographyImages/9.jpg';
 import image10Original from './photographyImages/10.jpg';
+import image11Original from './photographyImages/11.jpg';
+import image12Original from './photographyImages/12.jpg';
 
 import image1Small from './photographyImages/400-1.jpg';
 import image2Small from './photographyImages/400-2.jpg';
@@ -21,6 +23,8 @@ import image7Small from './photographyImages/400-7.jpg';
 import image8Small from './photographyImages/400-8.jpg';
 import image9Small from './photographyImages/400-9.jpg';
 import image10Small from './photographyImages/400-10.jpg';
+import image11Small from './photographyImages/400-11.jpg';
+import image12Small from './photographyImages/400-12.jpg';
 
 import image1Big from './photographyImages/800-1.jpg';
 import image2Big from './photographyImages/800-2.jpg';
@@ -32,6 +36,8 @@ import image7Big from './photographyImages/800-7.jpg';
 import image8Big from './photographyImages/800-8.jpg';
 import image9Big from './photographyImages/800-9.jpg';
 import image10Big from './photographyImages/800-10.jpg';
+import image11Big from './photographyImages/800-11.jpg';
+import image12Big from './photographyImages/800-12.jpg';
 
 export interface Photograph {
   smallUrl: string;
@@ -89,6 +95,16 @@ export const getPhotographs = async (): Promise<Photograph[]> => [
     smallUrl: image10Small.src,
     bigUrl: image10Big.src,
     originalUrl: image10Original.src,
+  },
+  {
+    smallUrl: image11Small.src,
+    bigUrl: image11Big.src,
+    originalUrl: image11Original.src,
+  },
+  {
+    smallUrl: image12Small.src,
+    bigUrl: image12Big.src,
+    originalUrl: image12Original.src,
   },
 ];
 

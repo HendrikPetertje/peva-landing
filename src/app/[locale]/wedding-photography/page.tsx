@@ -33,7 +33,7 @@ export default async function WeddingPage() {
   const images = await getPhotographs();
 
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <h1 className="text-4xl leading-16 ">{t('weddingPhotography')}</h1>
       <div>
         <MarkdownProxy>{introText}</MarkdownProxy>
