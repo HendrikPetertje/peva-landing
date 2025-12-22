@@ -32,8 +32,8 @@ export const getSlides = async (): Promise<Slide[]> => [
   {
     pathEn: 'github-gitlab',
     pathSe: 'github-gitlab',
-    titleEn: 'Github & Gitlanb',
-    titleSe: 'Github & Gitlanb',
+    titleEn: 'Github & Gitlab',
+    titleSe: 'Github & Gitlab',
     descriptionEn:
       'Check out my [Github](https://github.com/hendrikpetertje), [Gist](https://gist.github.com/HendrikPetertje) and [Gitlab](https://git.hendrikpeter.net/) profiles to see current and former projects, ideas and designs',
     descriptionSe:
