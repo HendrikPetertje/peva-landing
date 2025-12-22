@@ -32,11 +32,13 @@ export default async function WeddingPage() {
 
   return (
     <div>
-      <h1 className="text-4xl leading-16 ">{t('wedding_photography')}</h1>
+      <h1 className="text-4xl leading-16 ">{t('weddingPhotography')}</h1>
       <div>
         <MarkdownProxy>{introText}</MarkdownProxy>
       </div>
-      <div>Pictures grid</div>
+      <div>
+        <div className="w-[400px] h-[200px] bg-amber-200 block">hello</div>
+      </div>
     </div>
   );
 }

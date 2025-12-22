@@ -52,12 +52,12 @@ export const getSlides = async (): Promise<Slide[]> => [
       {
         pathEn: 'wedding-photography',
         pathSe: 'brollops-fotografi',
-        titleEn: 'Weddings',
-        titleSe: 'Bröllop',
+        titleEn: 'Events & Weddings',
+        titleSe: 'Evenamng & Bröllop',
         descriptionEn:
-          "I photograph weddings, [you can see some samples and check if I'm a good fit for your upcoming wedding!](/en/wedding-photography)",
+          "I photograph events and weddings, [check out some samples and see if I'm a good fit for your upcoming event or wedding!](/en/wedding-photography)",
         descriptionSe:
-          'Jag fotograferar bröllop, [du kan se några exempel och kolla om jag passar för ditt kommande bröllop!](/se/wedding-photography)',
+          'Jag fotograferar evenemang & bröllop, [du kan se några exempel och kolla om jag passar för er kommande evenemang eller bröllop!](/se/wedding-photography)',
         imageUrl: '',
       },
       {

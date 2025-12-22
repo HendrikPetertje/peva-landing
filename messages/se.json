@@ -3,9 +3,9 @@
     "pageTitle": "Hendrik Peter - Hem",
     "pageDescription": "Hendrik Peter's hemsida"
   },
-  "weddingPage": {
-    "pageTitle": "Hendrik Peter - Bröllopsfotografering",
+  "WeddingPage": {
+    "pageTitle": "Hendrik Peter - Evenemang- och bröllopsfotografering",
     "pageDescription": "Ett urval och detaljer om bröllopsfotografering i regionen runt Sundsvall gjort av Peter",
-    "wedding_photography": "Wedding Photography"
+    "weddingPhotography": "Evenemang- och bröllopsfotografering"
   }
 }
