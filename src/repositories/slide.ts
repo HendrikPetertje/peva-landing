@@ -50,14 +50,14 @@ export const getSlides = async (): Promise<Slide[]> => [
     imageUrl: photographyImage.src,
     subSlides: [
       {
-        pathEn: 'photography-weddings',
-        pathSe: 'fotografi-brollop',
+        pathEn: 'wedding-photography',
+        pathSe: 'brollops-fotografi',
         titleEn: 'Weddings',
         titleSe: 'Bröllop',
         descriptionEn:
-          "I photograph weddings, [you can see some samples and check if I'm a good fit for your upcoming wedding!](/wedding)",
+          "I photograph weddings, [you can see some samples and check if I'm a good fit for your upcoming wedding!](/en/wedding-photography)",
         descriptionSe:
-          'Jag fotograferar bröllop, [du kan se några exempel och kolla om jag passar för ditt kommande bröllop!](/wedding)',
+          'Jag fotograferar bröllop, [du kan se några exempel och kolla om jag passar för ditt kommande bröllop!](/se/wedding-photography)',
         imageUrl: '',
       },
       {
@@ -72,5 +72,16 @@ export const getSlides = async (): Promise<Slide[]> => [
         imageUrl: '',
       },
     ],
+  },
+  {
+    pathEn: 'dtp-design',
+    pathSe: 'dtp Design',
+    titleEn: 'Grafic Design & DTP',
+    titleSe: 'Grafisk Design & DTP',
+    descriptionEn:
+      'Check out my [Github](https://github.com/hendrikpetertje), [Gist](https://gist.github.com/HendrikPetertje) and [Gitlab](https://git.hendrikpeter.net/) profiles to see current and former projects, ideas and designs',
+    descriptionSe:
+      'Kolla in mina [Github](https://github.com/hendrikpetertje), [Gist](https://gist.github.com/HendrikPetertje) och [Gitlab](https://git.hendrikpeter.net/) profiler för att se nuvarande och tidigare projekt, idéer och designer',
+    imageUrl: ghGlImage.src,
   },
 ];

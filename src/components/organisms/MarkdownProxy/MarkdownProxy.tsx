@@ -1,3 +1,5 @@
+'use client';
+
 import Markdown, { type Options } from 'react-markdown';
 
 interface MarkdownProxyProps {
@@ -11,6 +13,7 @@ const components: Options['components'] = {
       {...props}
     />
   ),
+  p: (props) => <p className="mb-4 last:mb-0 laeding-2" {...props} />,
 };
 
 export default function MarkdownProxy(props: MarkdownProxyProps) {
