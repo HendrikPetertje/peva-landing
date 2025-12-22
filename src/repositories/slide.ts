@@ -79,9 +79,9 @@ export const getSlides = async (): Promise<Slide[]> => [
     titleEn: 'Grafic Design & DTP',
     titleSe: 'Grafisk Design & DTP',
     descriptionEn:
-      'Check out my [Github](https://github.com/hendrikpetertje), [Gist](https://gist.github.com/HendrikPetertje) and [Gitlab](https://git.hendrikpeter.net/) profiles to see current and former projects, ideas and designs',
+      'I make various graphic designs and DTP work, from business cards to flyers and posters. portfolio previews will come soon',
     descriptionSe:
-      'Kolla in mina [Github](https://github.com/hendrikpetertje), [Gist](https://gist.github.com/HendrikPetertje) och [Gitlab](https://git.hendrikpeter.net/) profiler för att se nuvarande och tidigare projekt, idéer och designer',
+      'Jag gör olika grafiska designer och DTP-arbete, från visitkort till flygblad och affischer. Portföljförhandsvisningar kommer snart',
     imageUrl: ghGlImage.src,
   },
 ];
