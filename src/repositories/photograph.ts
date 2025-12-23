@@ -12,6 +12,19 @@ import image9Original from './photographyImages/9.jpg';
 import image10Original from './photographyImages/10.jpg';
 import image11Original from './photographyImages/11.jpg';
 import image12Original from './photographyImages/12.jpg';
+import image13Original from './photographyImages/13.jpg';
+import image14Original from './photographyImages/14.jpg';
+import image15Original from './photographyImages/15.jpg';
+import image16Original from './photographyImages/16.jpg';
+import image17Original from './photographyImages/17.jpg';
+import image18Original from './photographyImages/18.jpg';
+import image19Original from './photographyImages/19.jpg';
+import image20Original from './photographyImages/20.jpg';
+import image21Original from './photographyImages/21.jpg';
+import image22Original from './photographyImages/22.jpg';
+import image23Original from './photographyImages/23.jpg';
+import image24Original from './photographyImages/24.jpg';
+import image25Original from './photographyImages/25.jpg';
 
 import image1Small from './photographyImages/400-1.jpg';
 import image2Small from './photographyImages/400-2.jpg';
@@ -25,6 +38,19 @@ import image9Small from './photographyImages/400-9.jpg';
 import image10Small from './photographyImages/400-10.jpg';
 import image11Small from './photographyImages/400-11.jpg';
 import image12Small from './photographyImages/400-12.jpg';
+import image13Small from './photographyImages/400-13.jpg';
+import image14Small from './photographyImages/400-14.jpg';
+import image15Small from './photographyImages/400-15.jpg';
+import image16Small from './photographyImages/400-16.jpg';
+import image17Small from './photographyImages/400-17.jpg';
+import image18Small from './photographyImages/400-18.jpg';
+import image19Small from './photographyImages/400-19.jpg';
+import image20Small from './photographyImages/400-20.jpg';
+import image21Small from './photographyImages/400-21.jpg';
+import image22Small from './photographyImages/400-22.jpg';
+import image23Small from './photographyImages/400-23.jpg';
+import image24Small from './photographyImages/400-24.jpg';
+import image25Small from './photographyImages/400-25.jpg';
 
 import image1Big from './photographyImages/800-1.jpg';
 import image2Big from './photographyImages/800-2.jpg';
@@ -38,6 +64,19 @@ import image9Big from './photographyImages/800-9.jpg';
 import image10Big from './photographyImages/800-10.jpg';
 import image11Big from './photographyImages/800-11.jpg';
 import image12Big from './photographyImages/800-12.jpg';
+import image13Big from './photographyImages/800-13.jpg';
+import image14Big from './photographyImages/800-14.jpg';
+import image15Big from './photographyImages/800-15.jpg';
+import image16Big from './photographyImages/800-16.jpg';
+import image17Big from './photographyImages/800-17.jpg';
+import image18Big from './photographyImages/800-18.jpg';
+import image19Big from './photographyImages/800-19.jpg';
+import image20Big from './photographyImages/800-20.jpg';
+import image21Big from './photographyImages/800-21.jpg';
+import image22Big from './photographyImages/800-22.jpg';
+import image23Big from './photographyImages/800-23.jpg';
+import image24Big from './photographyImages/800-24.jpg';
+import image25Big from './photographyImages/800-25.jpg';
 
 export interface Photograph {
   smallUrl: string;
@@ -105,6 +144,71 @@ export const getPhotographs = async (): Promise<Photograph[]> => [
     smallUrl: image12Small.src,
     bigUrl: image12Big.src,
     originalUrl: image12Original.src,
+  },
+  {
+    smallUrl: image13Small.src,
+    bigUrl: image13Big.src,
+    originalUrl: image13Original.src,
+  },
+  {
+    smallUrl: image14Small.src,
+    bigUrl: image14Big.src,
+    originalUrl: image14Original.src,
+  },
+  {
+    smallUrl: image15Small.src,
+    bigUrl: image15Big.src,
+    originalUrl: image15Original.src,
+  },
+  {
+    smallUrl: image16Small.src,
+    bigUrl: image16Big.src,
+    originalUrl: image16Original.src,
+  },
+  {
+    smallUrl: image17Small.src,
+    bigUrl: image17Big.src,
+    originalUrl: image17Original.src,
+  },
+  {
+    smallUrl: image18Small.src,
+    bigUrl: image18Big.src,
+    originalUrl: image18Original.src,
+  },
+  {
+    smallUrl: image19Small.src,
+    bigUrl: image19Big.src,
+    originalUrl: image19Original.src,
+  },
+  {
+    smallUrl: image20Small.src,
+    bigUrl: image20Big.src,
+    originalUrl: image20Original.src,
+  },
+  {
+    smallUrl: image21Small.src,
+    bigUrl: image21Big.src,
+    originalUrl: image21Original.src,
+  },
+  {
+    smallUrl: image22Small.src,
+    bigUrl: image22Big.src,
+    originalUrl: image22Original.src,
+  },
+  {
+    smallUrl: image23Small.src,
+    bigUrl: image23Big.src,
+    originalUrl: image23Original.src,
+  },
+  {
+    smallUrl: image24Small.src,
+    bigUrl: image24Big.src,
+    originalUrl: image24Original.src,
+  },
+  {
+    smallUrl: image25Small.src,
+    bigUrl: image25Big.src,
+    originalUrl: image25Original.src,
   },
 ];
 

@@ -13,14 +13,14 @@ export default function ImageGallery(props: ImageGalleryProps) {
   const isBigImage = (index: number) => index % 3 === 0;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 auto-rows-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-auto">
       {images.map((image, index) => {
         const isBig = isBigImage(index);
 
         return (
           <div
             key={image.bigUrl}
-            className={`relative ${isBig ? 'lg:col-span-2 lg:row-span-2' : 'col-span-1 row-span-1'}`}
+            className={`relative ${isBig ? 'md:col-span-2 md:row-span-2' : 'col-span-1 row-span-1'}`}
           >
             <Image
               src={isBig ? image.bigUrl : image.smallUrl}
