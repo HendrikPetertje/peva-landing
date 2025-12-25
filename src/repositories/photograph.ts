@@ -24,7 +24,6 @@ import image21Original from './photographyImages/21.jpg';
 import image22Original from './photographyImages/22.jpg';
 import image23Original from './photographyImages/23.jpg';
 import image24Original from './photographyImages/24.jpg';
-import image25Original from './photographyImages/25.jpg';
 
 import image1Small from './photographyImages/400-1.jpg';
 import image2Small from './photographyImages/400-2.jpg';
@@ -50,7 +49,6 @@ import image21Small from './photographyImages/400-21.jpg';
 import image22Small from './photographyImages/400-22.jpg';
 import image23Small from './photographyImages/400-23.jpg';
 import image24Small from './photographyImages/400-24.jpg';
-import image25Small from './photographyImages/400-25.jpg';
 
 import image1Big from './photographyImages/800-1.jpg';
 import image2Big from './photographyImages/800-2.jpg';
@@ -76,7 +74,6 @@ import image21Big from './photographyImages/800-21.jpg';
 import image22Big from './photographyImages/800-22.jpg';
 import image23Big from './photographyImages/800-23.jpg';
 import image24Big from './photographyImages/800-24.jpg';
-import image25Big from './photographyImages/800-25.jpg';
 
 export interface Photograph {
   smallUrl: string;
