@@ -202,11 +202,6 @@ export const getPhotographs = async (): Promise<Photograph[]> => [
     bigUrl: image24Big.src,
     originalUrl: image24Original.src,
   },
-  {
-    smallUrl: image25Small.src,
-    bigUrl: image25Big.src,
-    originalUrl: image25Original.src,
-  },
 ];
 
 export const getPhotographsIntroduction = async () => ({

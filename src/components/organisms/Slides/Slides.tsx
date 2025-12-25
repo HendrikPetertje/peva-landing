@@ -23,7 +23,7 @@ export default function Slides(props: SlidesProps) {
           <div key={slide.pathEn}>
             <button
               type="button"
-              className="text-4xl leading-16 cursor-pointer"
+              className="text-2xl md:text-4xl leading-14 md:leading-16 cursor-pointer hover:text-(--color-foam) transition"
               onClick={() => {
                 setCurrentSlideIndex(index);
                 setSecondarySlideIndex(null);
@@ -31,14 +31,18 @@ export default function Slides(props: SlidesProps) {
             >
               {locale === 'en' ? slide.titleEn : slide.titleSe}
             </button>
-            <div className={`${currentSlideIndex === index ? 'block' : 'hidden'}`}>
+            <div className={`${currentSlideIndex === index ? 'block' : 'hidden'} flex flex-col gap-4`}>
+              <div
+                className="block sm:hidden h-[200px] w-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${slide.imageUrl})` }}
+              />
               <MarkdownProxy>{locale === 'en' ? slide.descriptionEn : slide.descriptionSe}</MarkdownProxy>
               <div className="ml-8 flex flex-col gap-2">
                 {slide.subSlides?.map((subSlide, secondaryIndex) => (
                   <div key={subSlide.pathEn}>
                     <button
                       type="button"
-                      className="text-4xl text-(--color-subtle) leading-16 cursor-pointer"
+                      className="text-2xl md:text-4xl text-(--color-subtle) leading-14 md:leading-16 cursor-pointer"
                       onClick={() => {
                         setSecondarySlideIndex(secondaryIndex);
                       }}

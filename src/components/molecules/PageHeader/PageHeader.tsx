@@ -17,14 +17,14 @@ export default function PageHeader() {
 
   return (
     <div className="block md:flex flex-row-reverse justify-between pt-8 px-8">
-      <div className="flex justify-between items-center gap-3 pl-[96px] md:pl-0 mb-[-20px] md:mb-0">
+      <div className="flex justify-between items-center sm:mb-[-24px] md:mb-0 sm:ml-[96px] md:ml-0 gap-3">
         <div className="">
-          <img src={contactImage.src} alt="contact" className="h-[16px]" />
+          <img src={contactImage.src} alt="contact" className="max-h-[16px]" />
         </div>
         <Link
           href="/"
           locale={locale === 'en' ? 'se' : 'en'}
-          className={`bg-cover h-[24px] w-[24px] rounded-[12px] ${flagImagesStyle.activator}`}
+          className={`bg-contain h-[24px] w-[24px] rounded-[12px] ${flagImagesStyle.activator}`}
           style={imageVars}
           title="Change language | Byt språk"
         />
