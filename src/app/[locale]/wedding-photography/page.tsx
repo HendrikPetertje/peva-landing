@@ -34,7 +34,7 @@ export default async function WeddingPage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <h1 className="text-4xl leading-16 ">{t('weddingPhotography')}</h1>
+      <h1 className="text-2xl md:text-4xl leading-16 ">{t('weddingPhotography')}</h1>
       <div>
         <MarkdownProxy>{introText}</MarkdownProxy>
       </div>
