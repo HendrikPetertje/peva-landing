@@ -1,0 +1,12 @@
+{
+  "RootLayout": {
+    "foo": "bar",
+    "pageTitle": "Hendrik Peter - Home",
+    "pageDescription": "Hendrik Peter's personal website"
+  },
+  "WeddingPage": {
+    "pageTitle": "Hendrik Peter - Wedding & event Photography",
+    "pageDescription": "I photograph weddings and events in the region of sundsvall. Check out photo examples and details about my wedding photography services.",
+    "weddingPhotography": "Wedding & event Photography"
+  }
+}
